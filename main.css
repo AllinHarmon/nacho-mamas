@@ -5,7 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body {
-	background: url(images/nm_bg_light.jpg) #FFC;
+	background: url(images/nm_bg_light.jpg) #e0cec0;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 @font-face {
@@ -35,7 +35,7 @@ body {
 	margin: auto;
 }
 header {
-	background: url(images/nm_bg.jpg) brown;
+	background: url(images/nm_bg.jpg) #301f0d;
 	height: 200px; 
 	text-align: center;
 	color: beige;
@@ -50,7 +50,7 @@ header h2 {
 		font: 60px/68px 'AmaticBold', Arial, sans-serif;letter-spacing: 0;
 }
 nav {
-	background: url(images/nm_bg.jpg) brown; 
+	background: url(images/nm_bg.jpg) #301f0d; 
 	text-align: center;
 	color: beige;
 	padding: 10px;
@@ -215,10 +215,11 @@ span.smaller {
 }
 #directions {
 	text-align: center;
-	background: brown url(images/nm_bg.jpg);
+	background: url(images/nm_bg.jpg) #301f0d;
 	padding: 4px;
 	position: relative;
 	clear: both;
+	z-index:45;
 } 
 .directions {
 	padding-top: 60px;
@@ -271,7 +272,7 @@ div.hours {
 	padding: 5px 0;
 }
 div.facebook {
-	background: url(images/nm_bg_transp2.png);
+	background: url(images/nm_bg_transp2.png) ;
 	position: absolute;
 	line-height: 1.2em;
 	top: 309px;
@@ -295,7 +296,7 @@ a#facebook:hover {
 	background:url(images/facebook-hoverr.png) no-repeat;
 }
 .stickers {
-	min-height: 3740px; 
+	min-height: 4000px; 
 	padding: 0; 
 	margin: 0; 
 	width: 100%; 
