@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+/*resets all styles*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}body{line-height:1;}article,aside,dialog,figure,footer,header,hgroup,nav,section,blockquote{display:block;}nav ul{list-style:none;}ol{list-style:decimal;}ul{list-style:disc;}ul ul{list-style:circle;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}ins{text-decoration:underline;}del{text-decoration:line-through;}mark{background:none;}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input[type=submit],input[type=button],button{margin:0!important;padding:0!important;}input,select,a img{vertical-align:middle;}
+
+
+body {
+	background: url(images/nm_bg_light.jpg) #FFC;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+@font-face {
+    font-family: 'AmaticSCRegular';
+    src: url('fonts/amaticSC-Regular-webfont.eot');
+    src: url('fonts/amaticSC-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amaticSC-Regular-webfont.woff') format('woff'),
+         url('fonts/amaticSC-Regular-webfont.ttf') format('truetype'),
+         url('fonts/amaticSC-Regular-webfont.svg#AmaticSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'AmaticBold';
+    src: url('fonts/amatic-Bold-webfont.eot');
+    src: url('fonts/amatic-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amatic-Bold-webfont.woff') format('woff'),
+         url('fonts/amatic-Bold-webfont.ttf') format('truetype'),
+         url('fonts/amatic-Bold-webfont.svg#AmaticBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#container {
+	width: 1080px;
+	margin: auto;
+}
+header {
+	background: url(images/nm_bg.jpg) brown;
+	height: 200px; 
+	text-align: center;
+	color: beige;
+	position:relative;
+	z-index: 100;
+}
+header h1 {
+	position: absolute;
+	text-indent: -9999px;
+}
+header h2 {
+		font: 60px/68px 'AmaticBold', Arial, sans-serif;letter-spacing: 0;
+}
+nav {
+	background: url(images/nm_bg.jpg) brown; 
+	text-align: center;
+	color: beige;
+	padding: 10px;
+}
+nav li {
+	font: 1.5em/22px 'AmaticBold', Arial, sans-serif;
+	letter-spacing: 1px;
+	display: inline;
+	padding: 0 10px;	
+}
+nav a {
+	color: beige;
+	text-decoration: none;
+}
+nav a:hover {
+	color: grey;
+}
+.topNav {
+	position: relative;
+	z-index: 100;
+}
+.fixedNav {
+	position:fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+.showNav {
+	-moz-opacity: 0.10;
+	opacity: 0.10;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=10);
+}
+.hoverNav{
+	-moz-opacity: 0.90;
+	opacity: 0.90;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=90);
+}
+.menu {
+	background: url(images/nm_bg_transp.png);
+	-webkit-box-shadow:  -2px 2px 0px 4px #3b2711;
+    box-shadow:  -2px 2px 0px 4px #3b2711;
+	border-radius: 15px;
+	width: 416px;
+	margin:40px; 
+	padding:20px;
+	position: relative;	
+	overflow:hidden;
+	z-index: 60;
+}
+.flt-left {
+	float: left;
+}
+.flt-right {
+	float: right;
+}
+.menu-title {
+	font: 3.5em/1 'AmaticSCRegular', Arial, sans-serif;letter-spacing: 0;
+	text-align: center;
+}
+.menu-subtitle {
+	font-style: italic;
+	font-size: .7em;
+	line-height: .1em;
+	text-align: center;
+}
+div.line-height-2em {
+	line-height: 2em;
+}
+.menu-size {
+	font-style: oblique;
+	text-align: right;
+}
+.menu p {
+	font-size: 1.1em;
+	padding:10px 5px;
+}
+.menu-item {
+	position: relative;
+	bottom: 0;
+	text-align: left;
+}
+.menu-item p{
+	font-weight: bold;
+}
+.menu-price {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	text-align: right;
+}
+span.smaller {
+	font-size: .7em;
+}
+.menu-description p {
+	font-size: .9em;
+	padding:0px 10px;
+}
+.menu-type {
+	position: relative;
+	height: 50px;
+	text-align: right;
+}
+.reg {
+	width: 140px;
+	position: absolute;
+	top: 10px;
+	right: 140px;
+}
+.delx {
+	width: 140px;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+.menu-price1 {
+	position: absolute;
+	right: 140px;
+	top: 10px;
+	text-align: right;
+}
+.menu-price2 {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	text-align: right;
+}
+.sm {
+	width: 80px;
+	position: absolute;
+	top: 10px;
+	right: 160px;
+}
+.md {
+	width: 80px;
+	position: absolute;
+	top: 10px;
+	right: 80px;
+}
+.lg {
+	width: 80px;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+.menu-price-a {
+	position: absolute;
+	right: 160px;
+	top: 10px;
+	text-align: right;
+}
+.menu-price-b {
+	position: absolute;
+	right: 80px;
+	top: 10px;
+	text-align: right;
+}
+.menu-price-c {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	text-align: right;
+}
+#directions {
+	text-align: center;
+	background: brown url(images/nm_bg.jpg);
+	padding: 4px;
+	position: relative;
+	clear: both;
+} 
+.directions {
+	padding-top: 60px;
+}
+#glasses {
+	background: url(images/nm_eyes.png);
+	width: 866px;
+	height: 285px;
+	position: absolute;
+	top: -82px;
+	right: 107px;
+	z-index: 51;
+}
+.directions {
+	position: relative;
+	margin: auto;
+	width: 1080px;
+	z-index: 50;
+}
+iframe {
+	width: 840px;
+	height: 430px;
+	-webkit-box-shadow:  -2px 2px 0px 4px #b56d33;
+    box-shadow:  -2px 2px 0px 4px #b56d33;
+	border-radius: 15px;
+}
+div.directions-link {
+	background: url(images/nm_bg_transp2.png);
+	position: absolute;
+	top: 464px;
+	right: 120px;
+	width: 840px;
+	-webkit-box-shadow: -2px 2px 0px 4px #b56d33;
+	box-shadow: -2px 2px 0px 4px #b56d33;
+	border-radius: 0 0 15px 15px;
+	z-index: 52;
+	padding: 5px 0;
+}
+div.hours {
+	background: url(images/nm_bg_transp2.png);
+	position: absolute;
+	line-height: 1.2em;
+	top: 309px;
+	right: 120px;
+	width: 206px;
+	-webkit-box-shadow: -2px 2px 0px 4px #b56d33;
+	box-shadow: -2px 2px 0px 4px #b56d33;
+	border-radius: 15px 0 0 15px;
+	z-index: 52;
+	padding: 5px 0;
+}
+div.facebook {
+	background: url(images/nm_bg_transp2.png);
+	position: absolute;
+	line-height: 1.2em;
+	top: 309px;
+	left: 120px;
+	width: 206px;
+	-webkit-box-shadow: -2px 2px 0px 4px #b56d33;
+	box-shadow: -2px 2px 0px 4px #b56d33;
+	border-radius: 0 15px 15px 0;
+	z-index: 52;
+	padding: 5px 0;
+}
+a#facebook {
+	background: url(images/facebook.png) no-repeat;
+	display:inline-block; 
+	text-indent:-9999px;
+	width: 110px;
+	height: 110px;
+	padding:1px;
+}
+a#facebook:hover {
+	background:url(images/facebook-hoverr.png) no-repeat;
+}
+.stickers {
+	min-height: 3740px; 
+	padding: 0; 
+	margin: 0; 
+	width: 100%; 
+	position: absolute; 
+}
+.nm_guy {
+	background: url(images/nm_guy.png) 50% 50px no-repeat fixed;
+	background-size: auto 80%;
+}
+.nm_jimi {
+	background:url(images/nm_jimi.png) 15% 90px no-repeat fixed;
+	background-size: auto 60%;
+}
+.nm_zappa {
+	background:url(images/nm_zappa.png) 85% 90px no-repeat fixed;
+	background-size: auto 60%;
+	}
+.nm_dog {
+	background:url(images/nm_dog.png) 85% 95% no-repeat fixed;
+	background-size: auto 10%;
+}
+.nm_dood {
+	background:url(images/nm_dood.png) 35% 83% no-repeat fixed;
+	background-size: auto 9%;
+}
+.nm_hand {
+	background:url(images/nm_hand.png) 65% 33% no-repeat fixed;
+	background-size: auto 9%;
+}
+.nm_happy {
+	background:url(images/nm_happy.png) 40% 50% no-repeat fixed;
+	background-size: auto 9%;
+}
+.nm_south {
+	background:url(images/nm_south.png) 65% 75% no-repeat fixed;
+	background-size: auto 7%;
+}
+.nm_sucks {
+	background:url(images/nm_sucks.png) 17% 89% no-repeat fixed;
+	background-size: auto 7%; 
+}
+.nm_video {
+	background:url(images/nm_video.png) 32% 10% no-repeat fixed;
+	background-size: auto 7%;
+}
