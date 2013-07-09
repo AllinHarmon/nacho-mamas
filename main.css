@@ -3,9 +3,8 @@
 /*resets all styles*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}body{line-height:1;}article,aside,dialog,figure,footer,header,hgroup,nav,section,blockquote{display:block;}nav ul{list-style:none;}ol{list-style:decimal;}ul{list-style:disc;}ul ul{list-style:circle;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}ins{text-decoration:underline;}del{text-decoration:line-through;}mark{background:none;}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input[type=submit],input[type=button],button{margin:0!important;padding:0!important;}input,select,a img{vertical-align:middle;}
 
-
 body {
-	background: url(images/nm_bg_light.jpg) #e0cec0;
+	background: url(images/nm_bg_light.jpg) #e0cec0 fixed;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 @font-face {
@@ -36,7 +35,6 @@ body {
 }
 header {
 	background: url(images/nm_bg.jpg) #301f0d;
-	height: 200px; 
 	text-align: center;
 	color: beige;
 	position:relative;
@@ -48,6 +46,13 @@ header h1 {
 }
 header h2 {
 		font: 60px/68px 'AmaticBold', Arial, sans-serif;letter-spacing: 0;
+}
+header a {
+	text-decoration: none;
+	color: beige;
+}
+header p {
+	font-size: 1.6em;
 }
 nav {
 	background: url(images/nm_bg.jpg) #301f0d; 
@@ -113,11 +118,11 @@ nav a:hover {
 .menu-subtitle {
 	font-style: italic;
 	font-size: .7em;
-	line-height: .1em;
+	line-height: 2em;
 	text-align: center;
 }
-div.line-height-2em {
-	line-height: 2em;
+.menu-subtitle li {
+	text-decoration:none;
 }
 .menu-size {
 	font-style: oblique;
@@ -262,7 +267,7 @@ div.hours {
 	background: url(images/nm_bg_transp2.png);
 	position: absolute;
 	line-height: 1.2em;
-	top: 309px;
+	bottom: 60px;
 	right: 120px;
 	width: 206px;
 	-webkit-box-shadow: -2px 2px 0px 4px #b56d33;
@@ -275,7 +280,7 @@ div.facebook {
 	background: url(images/nm_bg_transp2.png) ;
 	position: absolute;
 	line-height: 1.2em;
-	top: 309px;
+	bottom: 60px;
 	left: 120px;
 	width: 206px;
 	-webkit-box-shadow: -2px 2px 0px 4px #b56d33;
@@ -286,10 +291,12 @@ div.facebook {
 }
 a#facebook {
 	background: url(images/facebook.png) no-repeat;
-	display:inline-block; 
-	text-indent:-9999px;
-	width: 110px;
-	height: 110px;
+	display:inline-block;
+   *display: inline;
+   *zoom: 1;
+   	text-indent:-9999px;
+	width: 150px;
+	height: 150px;
 	padding:1px;
 }
 a#facebook:hover {
@@ -341,4 +348,168 @@ a#facebook:hover {
 .nm_video {
 	background:url(images/nm_video.png) 32% 10% no-repeat fixed;
 	background-size: auto 7%;
+}
+.hide-button {
+	display: none;
+}
+
+
+/* --------------------------------------------
+  1200px
+-------------------------------------------- */	
+
+@media (max-width: 1100px) {
+
+	#container {
+		width: 960px;
+	}
+	.menu {
+		margin: 20px 5px;
+	}
+}
+
+/* --------------------------------------------
+  mobile
+-------------------------------------------- */
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	
+	#wrapper {
+		width: 420px;
+	}
+	#container {
+		width: 420px;
+		margin: auto;
+	}
+	header {
+		width: 420px;
+		height: auto;
+		padding: 20px;
+	}
+	.menu {
+		margin: 2px;
+		width: 416px;	
+	}		
+	.menu-item	p{
+		width: 300px;
+	}
+	#sides p {
+		width: 100px;
+	}
+	.menu-price1 {
+		right: 100px;
+	}
+	.reg {
+		right: 100px;
+	}
+	.delx {
+		width: 95px;
+	}
+	nav {
+		display: none;
+	}
+	.title img {
+		width: 100%;
+	}
+	.fixedNav {
+		display: none;
+	}
+	.flt-left {
+		float: none;
+	}
+	.flt-right {
+		float: none;
+	}
+	.nm_guy {
+		background: url(images/nm_guy.png) no-repeat;
+		position: fixed;
+		margin: 0 10%;
+		background-size: 80%;
+		-moz-opacity: 0.80;
+		opacity: 0.80;
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=90);	
+	}
+	.mobile-image {
+		display: none;
+	}
+	.directions {
+		padding: 0;
+		margin: 0;
+		width: 420px;
+	}
+	#glasses {
+		height: 0px;
+	}
+	div.directions-link {		
+		position: relative;		
+		top: 15px;
+		left: 0;
+		right: 0;
+		padding: 10px;
+		-webkit-box-shadow:  0px 0px 0px 0px #3b2711;
+		box-shadow:  0px 0px 0px 0px #3b2711;
+		border-radius: 15px;
+		width: 100%;
+	}
+	div.directions-link a {
+		font: 1.5em/22px 'AmaticBold', Arial, sans-serif;
+		background: url(images/nm_bg.jpg);
+		padding: 5px; 
+		border: 2px solid #301f0d;
+		border-radius: 10px;
+		text-decoration: none;
+		color: beige;	
+		}
+	div.hours {
+		position: relative;
+		top: 20px;
+		left: 0;
+		right: 0;
+		-webkit-box-shadow:  0px 0px 0px 0px #3b2711;
+		box-shadow:  0px 0px 0px 0px #3b2711;
+		border-radius: 15px;
+		width: 100%;
+	}
+	div.facebook {
+		position: relative;
+		top: 25px;	
+		left: 0;
+		right: 0;
+		-webkit-box-shadow:  0px 0px 0px 0px #3b2711;
+		box-shadow:  0px 0px 0px 0px #3b2711;
+		border-radius: 15px;
+		width: 100%;
+	}
+	iframe {
+		display: none;
+	}
+	.directions {
+		padding: 0;
+		margin: 0px;
+	}
+	#directions {
+		background: url(images/nm_bg_transp.png);
+	}
+	.menu-title {
+		margin-right: 110px;
+	}
+	.hide-button {
+		display: inline;
+		text-align: right;
+		position: absolute;
+		top: 29px;
+		right: 22px;
+		font-size: 0.5em;
+		background: url(images/nm_bg.jpg);
+		padding: 5px; 
+		border: 2px solid #301f0d;
+		border-radius: 10px;	
+	}
+	.hide-button a {
+		text-decoration: none;
+		color: beige;
+	}
+	.hide-menu {
+		display: none;
+	}
 }

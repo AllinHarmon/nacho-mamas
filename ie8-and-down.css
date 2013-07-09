@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu {
+	border: 4px solid #3b2711;
+	width: 400px;
+}
+a#facebook {
+	color: #cbb9ab;
+	text-indent: 0;
+}
