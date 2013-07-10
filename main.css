@@ -375,21 +375,26 @@ a#facebook:hover {
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
 	
 	#wrapper {
-		width: 420px;
+		width: 380px;
 	}
 	#container {
-		width: 420px;
+		width: 380px;
 		margin: auto;
 	}
 	header {
-		width: 420px;
+		width: 100%;
 		height: auto;
 		padding: 20px;
 	}
+	header h2 {
+		font-size: 3em;
+	}
+	header p {
+		font-size: 1.3em;
+	}
 	.menu {
 		background: none;
-		margin: 2px;
-		width: 416px;	
+		width: 380px;
 	}		
 	.menu-item	p{
 		width: 300px;
@@ -436,7 +441,7 @@ a#facebook:hover {
 	.directions {
 		padding: 0;
 		margin: 0;
-		width: 420px;
+		width: 100%;
 	}
 	#glasses {
 		height: 0px;
